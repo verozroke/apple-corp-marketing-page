@@ -418,11 +418,23 @@ h1, h2, h3, h4, h5, h6 {
           justify-content: center;
   color: #fff;
   font-size: 20px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
   border-radius: 0 3em 3em 0;
 }
 .trainings__el.active {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
   width: 600px;
   background-color: red;
+  -webkit-animation-name: test;
+          animation-name: test;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-direction: forwards;
+          animation-direction: forwards;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .trainings__vert-line {
   width: 5px;
@@ -431,6 +443,23 @@ h1, h2, h3, h4, h5, h6 {
   position: absolute;
 }
 
+@-webkit-keyframes test {
+  0% {
+    max-width: 500px;
+  }
+  100% {
+    max-width: 600px;
+  }
+}
+
+@keyframes test {
+  0% {
+    max-width: 500px;
+  }
+  100% {
+    max-width: 600px;
+  }
+}
 .block {
   width: 600px;
   height: 39.5em;
